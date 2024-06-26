@@ -1,5 +1,5 @@
 # Directiories
-EXEC_DIR = ../executables
+EXEC_DIR = ../bin
 OBJ_DIR = .objs
 
 # Non CUDA Executables

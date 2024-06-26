@@ -1,4 +1,5 @@
 *.exe
 *.pdf
+bin/
+build/
 examples/.objs
-executables/
