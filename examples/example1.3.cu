@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "../cxtimers.h"           // cx timers
 #include "cuda_runtime.h"          // cuda basic
-#include "cxtimers.h"              // cx timers
 #include "thrust/device_vector.h"  // thrust device vectors
 
 __host__ __device__ inline float sinsum(float x, int terms) {
@@ -43,7 +43,6 @@ int main(int argc, char *argv[]) {
     // Trapezoidal Rule Correction
     gpu_sum -= 0.5 * (sinsum(0.0f, terms) + sinsum(pi, terms));
     gpu_sum *= step_size;
-    printf("gpusum %.10f steps %d terms %d
-    time %.3f ms\n",gpu_sum,steps,terms,gpu_time);
+    printf("gpusum %.10f steps %d terms %d time %.3f ms\n",gpu_sum,steps,terms,gpu_time);
     return 0;
 }
