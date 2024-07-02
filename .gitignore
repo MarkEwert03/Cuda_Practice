@@ -3,3 +3,4 @@
 bin/
 build/
 examples/.objs
+.clang-format
